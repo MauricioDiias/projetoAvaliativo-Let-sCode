@@ -5,6 +5,7 @@
     --fourth-color: #1845ad;
     --text-color: #fefefe; 
     --border-radius: 20px; 
+}
 
 body{
    
@@ -12,12 +13,12 @@ body{
         
     }
     
-  
-}
 
   
 
-  
+
+
+
   
   label {
     display: block;
@@ -25,18 +26,20 @@ body{
     color: var(--text-color);
     font-weight: bold;
   }
+ 
   
   input[type="email"],
-  input[type="password"] {
+  input[type="password"],
+  input[type="text"],
+  input[type="number"] {
     
     display: block;
       height: 50px;
       width: 100%;
-      background-color:rgba(255,255,255,0.08);
+      background-color: var(--secondary-color);
       border-radius: 30px;
-      border: 1px solid rgba(255, 255, 255, 0.2);
+      border: solid 1px #D9D9D9 ;
       padding: 0 10px;
-      backdrop-filter: blur (10px);
       margin-top: 8px;
       font-size: 14px;
       font-weight: 300;
@@ -53,14 +56,14 @@ body{
     background-color:transparent;
     border-radius: 30px;
     text-align: center;
-    color: var(--terciary-color);
+    color: black;
     
    
     font-size: 14px;
   }
   
   .paragrafo a {
-    color: var(--text-color);
+    color: black;
     
     text-decoration: none; 
    
@@ -97,39 +100,37 @@ body{
   }
   .shape:first-child{
     background: linear-gradient(
-        #1845ad,
-        #23a2f6
+        #ff512f,
+        #f09819
     );
-    left: -100px;
+    left: -80px;
     top: -80px;
 }
 .shape:last-child{
     background: linear-gradient(
         to right,
-        #ff512f,
-        #f09819
+        #1845ad,
+        #23a2f6
+        
     );
-    right: -100px;
+    right: -30px;
     bottom: -80px;
 }
 
   form{
-    
-    display: flex;
+    display:flex;
     flex-direction: column;
-    flex-grow: 1;
-    flex-shrink: 1;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+
     gap: 10px; 
-      height: 620px;
-      width: 400px;
-      background-color: rgba(255,255,255,0.08);
+      height: 100%;
+      width: 600px;
+      background-color: (255,255,255,0.13);
       position: absolute;
       transform: translate(-50%,-50%);
       top: 50%;
       left: 50%;
       border-radius: 40px;
-      backdrop-filter: blur(10px);
+      backdrop-filter: blur(3px);
     
       box-shadow: 0 0 40px rgba(8,7,16,0.6);
       padding: 50px 35px;
