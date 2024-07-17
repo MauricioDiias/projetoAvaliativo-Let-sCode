@@ -1,21 +1,20 @@
 const tituloDaSecao = document.getElementById('tituloDaSecao')  
     
 window.onload = async () => {
-  const usuario = localStorage.getItem('logado');
+  const usuario = JSON.parse(localStorage.getItem('logado'));
+  console.log(usuario);
 
   let titulo = document.getElementById('titulo')
   let imagem = document.createElement('img')
   let descricao = document.createElement('p')
   
-  
-  
-  descricao.innerHTML = `Cidade: ${usuario.cidade}<br> Idade:${usuario.idade} <br>Email:${usuario.email}`
+  tituloDaSecao.innerHTML += `${usuario.nome}!`;
+  descricao.innerHTML = `Cidade: ${usuario.cidade}<br> Idade:${usuario.idade} <br>Email:${usuario.email}`;
 
-  imagem.setAttribute('src', logado.foto)
+  imagem.setAttribute('src', usuario.foto)
 
-  tituloDaSecao.textContent += logado.usuario + '!'
-  titulo.appendChild(tituloDaSecao)
-  titulo.appendChild(imagem)
+  titulo.appendChild(tituloDaSecao);
+  titulo.appendChild(imagem);
   titulo.appendChild(descricao);
 };
 

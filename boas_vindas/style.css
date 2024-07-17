@@ -24,11 +24,16 @@ body {
 .container {
   display: flex;
   flex-direction: column;
-  width: 300px;
   padding: 40px 25px;
   background: white;
   gap: 10px;
   border-radius: 20px;
+}
+
+#titulo {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 h2 {
@@ -40,6 +45,11 @@ form {
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+
+img {
+  width: 60%;
+  margin: 0 20%;
 }
 
 input {
