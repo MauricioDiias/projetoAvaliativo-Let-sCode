@@ -20,11 +20,11 @@ async function carregarDados(){
     } catch (error) {
       console.error('Erro ao registrar:', error);
     }
-  // let response = await fetch('https://raw.githubusercontent.com/GilsonJunio/Alunos-Do-Lets-Code-2024/main/data.json')
-  // let data = await response.json()
-  // let dados = data.alunos
+   const response = await fetch(`${apiUrl}/register`)
+   let data = await response.json()
+   let dados = data.alunos
 
-  // localStorage.setItem('usuarios',JSON.stringify(dados))
+   localStorage.setItem('usuarios',JSON.stringify(dados))
 }
 
 carregarDados();
@@ -45,7 +45,6 @@ if (botaoRegistrar) {
         let foto = document.getElementById("foto").value;
 
         let password = document.getElementById("senha").value;
-
 
         function mesmoEmail(email){
             let usuarios_verificar = JSON.parse(localStorage.getItem('usuarios')) || [] 
