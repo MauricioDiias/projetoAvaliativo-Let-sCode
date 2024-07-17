@@ -7,7 +7,7 @@ async function carregarDados(){
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ nome: "Gilson Junio", email: "gilsonjunio@exemplo.com", password: "Senha@123", idade: "22", cidade: "Ilha Grande - PI", foto: "https://lh3.googleusercontent.com/a/ACg8ocLTsNq5FggJsEQpzLApIMzRGWRlOSY-D1SClpABYxxLxDeB2YYj=s192-c-mo","created_at":"2024-07-15T21:09:17.267Z"}),
+        body: JSON.stringify({ nome: "Alessandra Ataíde", email: "alessandraataide@exemplo.com", password: "Senha@123", idade: "20", cidade: "Parnaíba - PI", foto: "a","created_at":"2024-07-15T21:09:17.267Z"}),
       });
 
       const result = await response.json();
@@ -20,11 +20,11 @@ async function carregarDados(){
     } catch (error) {
       console.error('Erro ao registrar:', error);
     }
-  // let response = await fetch('https://raw.githubusercontent.com/GilsonJunio/Alunos-Do-Lets-Code-2024/main/data.json')
-  // let data = await response.json()
-  // let dados = data.alunos
+   const response = await fetch(`${apiUrl}/register`)
+   let data = await response.json()
+   let dados = data.alunos
 
-  // localStorage.setItem('usuarios',JSON.stringify(dados))
+   localStorage.setItem('usuarios',JSON.stringify(dados))
 }
 
 carregarDados();
@@ -45,7 +45,6 @@ if (botaoRegistrar) {
         let foto = document.getElementById("foto").value;
 
         let password = document.getElementById("senha").value;
-
 
         function mesmoEmail(email){
             let usuarios_verificar = JSON.parse(localStorage.getItem('usuarios')) || [] 

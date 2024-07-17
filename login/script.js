@@ -8,7 +8,7 @@ async function carregarDados(){
           headers: {
             'Content-Type': 'application/json',
           },
-          body: JSON.stringify({ email: "joaopedro@exemplo.com", password: "Senha@123" }),
+          body: JSON.stringify({ email: "alessandraataide@exemplo.com" }),
         });
 
         const result = await response.json();
@@ -23,9 +23,10 @@ async function carregarDados(){
       } catch (error) {
         console.error('Erro ao realizar login:', error);
       }
-    // let response = await fetch('https://raw.githubusercontent.com/GilsonJunio/Alunos-Do-Lets-Code-2024/main/data.json')
-    // let data = await response.json()
-    // let dados = data.alunos
+     //let response = await fetch('`${apiUrl}/login`')
+     console.log(response)
+     let data = await response.json()
+     let dados = data.alunos
 
     // localStorage.setItem('usuarios',JSON.stringify(dados))
 }
