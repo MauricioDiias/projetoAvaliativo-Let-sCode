@@ -7,7 +7,7 @@ async function carregarDados(){
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ nome: "joao pedro", email: "joaopedro@exemplo.com", password: "Senha@123", idade: "19", cidade: "Camocim-CE", foto: "https://lh3.googleusercontent.com/a/ACg8ocJfp28MJtK4szJ-DCFPTKZMMqatWtFQRl1_FgNfC_8fGY4wUaL7=s192-c-mo","created_at":"2024-07-15T21:09:17.267Z"}),
+        body: JSON.stringify({ nome: "Gilson Junio", email: "gilsonjunio@exemplo.com", password: "Senha@123", idade: "22", cidade: "Ilha Grande - PI", foto: "https://lh3.googleusercontent.com/a/ACg8ocLTsNq5FggJsEQpzLApIMzRGWRlOSY-D1SClpABYxxLxDeB2YYj=s192-c-mo","created_at":"2024-07-15T21:09:17.267Z"}),
       });
 
       const result = await response.json();
