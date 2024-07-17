@@ -9,6 +9,7 @@ botaoLogin.addEventListener("click", () => {
 
   if (!emailLogin || !senhaLogin) {
     alert("por favor, preencha os campos.");
+    botaoLogin.removeAttribute("disabled", "");
   } else {
     login(emailLogin, senhaLogin);
   }
@@ -35,13 +36,15 @@ async function login(emailLogin, senhaLogin) {
       window.location.href = "../boas_vindas/index.html";
     } else {
       alert(`Erro: ${result.error}, fetch deu certo`);
-      botaoLogin.setAttribute("disabled", "false");
     }
 
     console.log(result);
   } catch (error) {
     alert("erro do fetch");
     console.error("Erro ao realizar login:", error);
-    botaoLogin.setAttribute("disabled", "false");
+    //botaoLogin.setAttribute("disabled", "false");
   }
+    finally {
+      botaoLogin.removeAttribute("disabled");
+    }
 }

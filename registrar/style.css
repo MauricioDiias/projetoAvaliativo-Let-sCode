@@ -1,187 +1,159 @@
 :root {
-    --primary-color: #ff512f; 
-    --secondary-color: #353535; 
-    --terciary-color: #D9D9D9;
-    --fourth-color: #1845ad;
-    --text-color: #fefefe; 
-    --border-radius: 20px; 
+  --primary-color: #ff512f;
+  --secondary-color: #353535;
+  --terciary-color: #d9d9d9;
+  --fourth-color: #1845ad;
+  --text-color: #fefefe;
+  --border-radius: 20px;
+
+}
+body {
+  background-color: var(--secondary-color);
+  height: 100%;
 }
 
-body{
-   
-        background-color: var(--secondary-color);
-        
-    }
-    
+.paragrafo {
+  display: flex;
+  background-color: transparent;
+  border-radius: 30px;
+  justify-content: center;
+  text-align: center;
+  color: var(--terciary-color);
+  font-size: 14px;
+}
+.paragrafo a {
+  display: flex;
+  color: var(--text-color);
+  text-decoration: none;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
 
+.paragrafo a:hover {
+  color: var(--terciary-color);
+  transition: color var(--terciary-color) 0.2s ease-in-out;
+}
+*,
+*:before,
+*:after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.background {
+  width: 430px;
+  height: 520px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+}
+.background .shape {
+  height: 200px;
+  width: 200px;
+  position: absolute;
+  border-radius: 50%;
+}
+.shape:first-child {
+  background: linear-gradient(#ff512f, #f09819);
+  left: -80px;
+  top: -80px;
+}
+.shape:last-child {
+  background: linear-gradient(to right, #1845ad, #23a2f6);
+  right: -30px;
+  bottom: -80px;
+}
+
+form {
+  display: grid;
+  justify-content: center;
+  text-align: center;
   
-
-
-
-
-  
-  label {
-    display: block;
-    margin-bottom: 5px;
-    color: var(--text-color);
-    font-weight: bold;
-  }
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  flex-grow: 1;
+  flex-shrink: 1;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  gap: 10px;
+  height: 620px;
+  width: 400px;
+  background-color: rgba(255, 255, 255, 0.08);
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  border-radius: 40px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+  padding: 50px 35px;
+}
+form * {
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  color: var(--text-color);
+  letter-spacing: 0.5px;
+  outline: none;
+  border: none;
+}
+form h3 {
+  grid-column: span 2;
+  height: 12%;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 42px;
+  text-align: center;
+  margin-bottom: 10;
+  width: 100%;
  
-  
-  input[type="email"],
-  input[type="password"],
-  input[type="text"],
-  input[type="number"] {
-    
-    display: block;
-      height: 50px;
-      width: 100%;
-      background-color: var(--secondary-color);
-      border-radius: 30px;
-      border: solid 1px #D9D9D9 ;
-      padding: 0 10px;
-      margin-top: 8px;
-      font-size: 14px;
-      font-weight: 300;
-   
-    
-  }
-  
-  
- 
-  
-  .paragrafo {
-    
-   
-    background-color:transparent;
-    border-radius: 30px;
-    text-align: center;
-    color: black;
-    
-   
-    font-size: 14px;
-  }
-  
-  .paragrafo a {
-    color: black;
-    
-    text-decoration: none; 
-   
-  }
-  
-  .paragrafo a:hover {
-    color: var(--terciary-color) ;
-    transition: color var(--terciary-color) 0.2s ease-in-out;
-    
-  }
-  
-  *,
-  *:before,
-  *:after{
-      padding: 0;
-      margin: 0;
-      box-sizing: border-box;
-  }
-  
-  .background{
-    
-      width: 430px;
-      height: 520px;
-      position: absolute;
-      transform: translate(-50%,-50%);
-      left: 50%;
-      top: 50%;
-  }
-  .background .shape{
-      height: 200px;
-      width: 200px;
-      position: absolute;
-      border-radius: 50%;
-  }
-  .shape:first-child{
-    background: linear-gradient(
-        #ff512f,
-        #f09819
-    );
-    left: -80px;
-    top: -80px;
 }
-.shape:last-child{
-    background: linear-gradient(
-        to right,
-        #1845ad,
-        #23a2f6
-        
-    );
-    right: -30px;
-    bottom: -80px;
+input[type="email"],
+input[type="password"],
+input[type="text"],
+input[type="number"] {
+  display: block;
+  height: 50px;
+  width: 50%;
+  background-color: rgba(255, 255, 255, 0.08);
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 0 10px;
+  margin-top: 0;
+  font-size: 14px;
+  font-weight: 300;
+  width: 100%;
+  
 }
-
-  form{
-    display:flex;
-    flex-direction: column;
-
-    gap: 10px; 
-      height: 100%;
-      width: 600px;
-      background-color: (255,255,255,0.13);
-      position: absolute;
-      transform: translate(-50%,-50%);
-      top: 50%;
-      left: 50%;
-      border-radius: 40px;
-      backdrop-filter: blur(3px);
-    
-      box-shadow: 0 0 40px rgba(8,7,16,0.6);
-      padding: 50px 35px;
-  }
-  form *{
-    text-align: center;
-      
-      font-family: 'Poppins',sans-serif;
-      color: var(--text-color);
-      letter-spacing: 0.5px;
-      outline: none;
-      border: none;
-  }
-  form h3{
-    height: 12%;
-      font-size: 32px;
-      font-weight: 500;
-      line-height: 42px;
-      text-align: center;
-  }
+label {
+  display: block;
+  margin-top: 10px;
+  color: var(--text-color);
+  margin-bottom: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: left;
+  width: 100%;
   
-  label{
-      display: block;
-      margin-top: 30px;
-      color: var(--text-color);
-      font-size: 16px;
-      font-weight: 500;
-  }
   
-  ::placeholder{
-      color: var(--terciary-color);
-  }
-  
-  button{
-      margin-top: 50px;
-      width: 100%;
-      background-color: var(--text-color);
-      color: var(--secondary-color);
-      padding: 15px 0;
-      font-size: 18px;
-      font-weight: 600;
-      border-radius: 30px;
-      cursor: pointer;
-      animation: pulsate 2s ease-in-out infinite alternate;
-
-  }
-  
-  button:hover{
-
-    transform: scale(0.98);
-   
-  }
-  
-
+}
+::placeholder {
+  color: var(--terciary-color);
+}
+button {
+  grid-column: span 2;
+  margin-top: 10%;
+  gap: 10px;
+  width: 100%;
+  background-color: var(--text-color);
+  color: var(--secondary-color);
+  padding: 15px 0;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 30px;
+  cursor: pointer;
+  animation: pulsate 2s ease-in-out infinite alternate;
+}
+button:hover {
+  transform: scale(0.98);
+}
