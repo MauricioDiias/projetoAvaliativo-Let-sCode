@@ -16,6 +16,14 @@ window.onload = async () => {
   titulo.appendChild(tituloDaSecao);
   titulo.appendChild(imagem);
   titulo.appendChild(descricao);
+
+  const botaoSair = document.getElementById('botao-sair');
+
+  
+  botaoSair.addEventListener('click', () => {
+    // Redirect to the login page on button click
+    window.location.href = '../login/index.html';
+  });
 };
 
 async function carregarDados(){

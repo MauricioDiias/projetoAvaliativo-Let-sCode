@@ -14,6 +14,7 @@
   box-sizing: border-box;
   background-color: var(--secondary-color);
   color: var(--text-color);
+  
 }
 body,
 html {
@@ -26,7 +27,7 @@ body {
   align-items: center;
 }
 h1 {
-  background-color: transparent;
+  background-color: transparent);
 }
 
 .menu {
@@ -96,6 +97,11 @@ h1 {
 h1 {
   font-size: 40px;
   font-weight: bold;
+  background-color: transparent;
+}
+h2 {
+  background-color: transparent;
+
 }
 .container {
   display: flex;
@@ -125,8 +131,11 @@ h1 {
   flex-direction: column;
   gap: 20px;
   color: var(--primary-color);
+  background-color:transparent;
 }
 img{
+  margin-left: 20;
+  margin-right: 20;
   border-radius: 50%;
   height:300px;
   width: 300px;
@@ -135,15 +144,17 @@ img{
 
 
 
-.botao-sair {
+button {
+  grid-column: span 2;
   margin-top: 10%;
   gap: 10px;
-  width: 200px;
+  width: 100%;
   background-color: var(--text-color);
   color: var(--secondary-color);
   padding: 15px 0;
   font-size: 18px;
   font-weight: 600;
+  border: none;
   border-radius: 30px;
   cursor: pointer;
   animation: pulsate 2s ease-in-out infinite alternate;
@@ -155,4 +166,8 @@ button:hover {
   font-size: 15;
   background-color: transparent;
   text-align: left;
+}
+p{
+  background-color: transparent;
+
 }
