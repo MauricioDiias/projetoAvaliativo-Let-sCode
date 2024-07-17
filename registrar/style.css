@@ -12,28 +12,7 @@ body {
   height: 100%;
 }
 
-.paragrafo {
-  display: flex;
-  background-color: transparent;
-  border-radius: 30px;
-  justify-content: center;
-  text-align: center;
-  color: var(--terciary-color);
-  font-size: 14px;
-}
-.paragrafo a {
-  display: flex;
-  color: var(--text-color);
-  text-decoration: none;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-}
 
-.paragrafo a:hover {
-  color: var(--terciary-color);
-  transition: color var(--terciary-color) 0.2s ease-in-out;
-}
 *,
 *:before,
 *:after {
@@ -58,12 +37,12 @@ body {
 }
 .shape:first-child {
   background: linear-gradient(#ff512f, #f09819);
-  left: -80px;
+  left: -100px;
   top: -80px;
 }
 .shape:last-child {
   background: linear-gradient(to right, #1845ad, #23a2f6);
-  right: -30px;
+  right: -100px;
   bottom: -80px;
 }
 
@@ -106,6 +85,7 @@ form h3 {
   text-align: center;
   margin-bottom: 10;
   width: 100%;
+  text-align: center;
  
 }
 input[type="email"],
@@ -134,6 +114,7 @@ label {
   font-weight: bold;
   text-align: left;
   width: 100%;
+  text-align: left;
   
   
 }
@@ -156,4 +137,26 @@ button {
 }
 button:hover {
   transform: scale(0.98);
+}
+.paragrafo {
+  display: block;  
+  grid-column: span 2;  
+  align-self: center;  
+  justify-self: center;
+  width: 100%;
+  background-color: transparent;
+  border-radius: 30px;
+  color: var(--terciary-color);
+  font-size: 14px;
+}
+.paragrafo a {
+  width: 100%;
+  color: var(--text-color);
+  text-decoration: none;
+  
+}
+
+.paragrafo a:hover {
+  color: var(--terciary-color);
+  transition: color var(--terciary-color) 0.2s ease-in-out;
 }
