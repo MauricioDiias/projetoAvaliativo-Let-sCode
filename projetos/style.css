@@ -1,0 +1,51 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  gap: 50px;
+  background-color: blue;
+  margin-left: 100px;
+}
+.projetosContainer{
+	background-color: red;
+	width: 90%;
+}
+.projeto{
+	list-style: NONE;
+	background-color: green;
+	margin-top: 120px;
+}
+.projeto h2{
+	line-height: 100px;
+	letter-spacing: 5px;
+}
+.projeto a{
+	text-decoration: none;
+	color: black;
+}
+.projeto a:hover{
+	text-decoration: underline;
+}
+.projeto_print{
+	width: 900px;
+	height: 500px;
+}
+h2{
+	font-size: 34px;
+}
+.tituloDaSecao{
+	text-align: center;
+	font-size: 64px;
+}
+.descricao_do_projeto{
+	margin-top: 10px;
+	float: right;
+	font-size: 24px;
+	width: 600px;
+	padding-left: 100px;
+	padding-right: 50px;	
+	text-align: justify;
+	line-height: 1.5;
+}
