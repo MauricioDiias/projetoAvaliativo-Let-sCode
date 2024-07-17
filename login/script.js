@@ -1,50 +1,35 @@
-let botaoLogin = document.getElementById("botao_login");
+// Nome, email, idade, cidade, foto e senha
+const botaoLogin = document.getElementById("botao_login");
+botaoLogin.addEventListener('click', () => {
+  botaoLogin.disabled = true;
+  const email = document.getElementById("email_login").value;
+  const senha = document.getElementById("senha_login").value;
 
-botaoLogin.addEventListener("click", () => {
-  let emailLogin = document.getElementById("email_login").value;
-  let senhaLogin = document.getElementById("senha_login").value;
-  botaoLogin.setAttribute("disabled", "");
-  
-  
+  carregarDados(email, senha);
+})
 
-  if (!emailLogin || !senhaLogin) {
-    alert("por favor, preencha os campos.");
-    botaoLogin.removeAttribute("disabled", "");
-  } else {
-    login(emailLogin, senhaLogin);
-  }
-});
-
-async function login(emailLogin, senhaLogin) {
+async function carregarDados(email, password){
+  const apiUrl = "https://projeto-backend-five.vercel.app"
   try {
-    let response = await fetch(
-      "https://projeto-backend-five.vercel.app/login",
-      {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          email: emailLogin,
-          password: senhaLogin,
-        }),
+      const response = await fetch(`${apiUrl}/login`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email: email, password: password }),
+      });
+
+      const result = await response.json();
+      
+      if (response.ok) {
+        localStorage.setItem("logado", JSON.stringify(result.user));
+        console.log(result);
+        window.location.href = "../boas_vindas/index.html";
+      } else {
+        alert(`Erro: ${result.error}`);
+        botaoLogin.disabled = false;
       }
-    );
-
-    const result = await response.json();
-
-    if (response.ok) {
-      alert("Login bem sucedido!");
-      window.location.href = "../boas_vindas/index.html";
-    } else {
-      alert(`Erro: ${result.error}, fetch deu certo`);
-    }
-
-    console.log(result);
   } catch (error) {
-    alert("erro do fetch");
-    console.error("Erro ao realizar login:", error);
-    //botaoLogin.setAttribute("disabled", "false");
+    console.error('Erro ao realizar login:', error);
   }
-    finally {
-      botaoLogin.removeAttribute("disabled");
-    }
 }

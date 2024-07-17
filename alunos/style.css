@@ -7,3 +7,58 @@
   padding: 50px;
   gap: 50px;
 }
+.nome {
+  border: 1px solid red;
+}
+h1{
+  font-size: 40px;
+  font-weight: bold;
+}
+.menu{
+  position: fixed;
+  left: 0;
+  background-color: rgba(255,255,255,0.08);
+  height: 100%;
+  width: 200px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 0px 20px 20px 0px;
+  backdrop-filter: blur(10px);
+  gap: 20px;
+  box-shadow: 0 0 40px rgba(8,7,16,0.6);
+}
+.lista-menu {
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  width: 100%;
+}
+
+.lista-menu li {
+  background-color: transparent;
+  padding: 1px;
+}
+
+.lista-menu li a {
+  background-color: transparent;
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.lista-menu a:hover {
+  color: var(--primary-color)
+}
+
+.selecionado {
+  color: var(--text-color);
+}
+
+.selecionado a {
+  backdrop-filter: blur(10px);
+  color: var(--text-color);
+
+
+}

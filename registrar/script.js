@@ -1,55 +1,48 @@
-let botaoRegistro = document.getElementById("botao-registro");
+const botaoRegistrar = document.getElementById("botao-registro");
+botaoRegistrar.addEventListener("click", () => {
+    const usuario = document.getElementById("usuario").value;
+    const email = document.getElementById("email").value;
+    const idade = document.getElementById("idade").value;
+    const cidade = document.getElementById("cidade").value;
+    const foto = document.getElementById("foto").value;
+    const password = document.getElementById("senha").value;
 
-botaoRegistro.addEventListener("click", () => {
-  let usuario = document.getElementById("usuario").value;
-  let senha = document.getElementById("senha").value;
-  let email = document.getElementById("email").value;
-  let idade = document.getElementById("idade").value;
-  let foto = document.getElementById("foto").value;
-  let cidade = document.getElementById("cidade").value;
-  botaoRegistro.setAttribute("disabled", "");
-  
-  
-
-  if (!senha || !usuario || !email || !foto || !cidade || !idade ) {
-    alert("por favor, preencha os campos.");
-  } else {
-    register( senha, idade, email, foto, usuario, cidade);
-  }
-});
-
-async function register(senha, idade, email, foto, usuario, cidade) {
-  try {
-    let response = await fetch(
-      "https://projeto-backend-five.vercel.app/register",
-      {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          email: email,
-          password: senha,
-          nome: usuario,
-          idade: idade,
-          cidade: cidade,
-          foto: foto
-        }),
-      }
-    );
-
-    const result = await response.json();
-
-    if (response.ok) {
-      alert("Registro bem sucedido!");
-      window.location.href = "../login/index.html";
-    } else {
-      alert(`Erro: ${result.error}, fetch deu certo`);
-      botaoRegistro.setAttribute("disabled", "false");
+    function camposVazios(){
+        const valoresRepassados = [usuario,email,idade,cidade,foto,password];
+        let procurarCampoVazio = valoresRepassados.find(valores => valores === "");
+        if(procurarCampoVazio === ""){
+            alert('EXISTEM CAMPOS VAZIOS!')
+        }
+        else{
+          return false    
+        }
     }
 
-    console.log(result);
-  } catch (error) {
-    alert("erro do fetch");
-    console.error("Erro ao realizar login:", error);
-    botaoRegistro.setAttribute("disabled", "false");
-  }
+    if(camposVazios() === false){
+      carregarDados(usuario, email, idade, cidade, foto, password);
+    }
+})
+
+async function carregarDados(usuario, email, idade, cidade, foto, password){
+  const apiUrl = "https://projeto-backend-five.vercel.app"
+  try {
+      const response = await fetch(`${apiUrl}/register`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ nome: usuario, email: email, password: password, idade: idade, cidade: cidade, foto: foto }),
+      });
+
+      const result = await response.json();
+
+      if (response.ok) {
+        window.location.href = "../login/index.html";
+      } else {
+        alert(`Erro: ${result.error}`);
+      }
+    } catch (error) {
+      console.error('Erro ao registrar:', error);
+    }
+
 }

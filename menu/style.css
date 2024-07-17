@@ -19,15 +19,15 @@
 }
 h1{
   background-color: transparent;
+  font-size: 40px;
+  font-weight: bold;
 }
 
 
 .menu {
-  
   position: fixed;
   left: 0;
   background-color: rgba(255,255,255,0.08);
- 
   height: 100%;
   width: 200px;
   padding: 20px;
@@ -66,7 +66,6 @@ bottom: 0px;
 }
 
 .lista-menu {
-  
   background-color: transparent;
   display: flex;
   flex-direction: column;
@@ -75,34 +74,27 @@ bottom: 0px;
 }
 
 .lista-menu li {
- 
   background-color: transparent;
-  
-  padding: 10px;
+  padding: 1px;
 }
 
 .lista-menu li a {
-  
   background-color: transparent;
-  
   color: var(--text-color);
   text-decoration: none;
 }
 
 .lista-menu a:hover {
-  
- 
   color: var(--primary-color)
 }
 
 .selecionado {
-  
-  color: white;
+  color: var(--text-color);
 }
 
 .selecionado a {
   backdrop-filter: blur(10px);
-  
-  
-  color: white;
+  color: var(--text-color);
+
+
 }

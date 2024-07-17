@@ -1,34 +1,38 @@
-  
-  :root {
-    --primary-color: #ff512f; 
-    --secondary-color: #353535; 
-    --terciary-color: #D9D9D9;
-    --fourth-color: #1845ad;
-    --text-color: #fefefe; 
-    --border-radius: 20px; 
-
+:root {
+  --primary-color: #ff512f;
+  --secondary-color: #353535;
+  --terciary-color: #d9d9d9;
+  --fourth-color: #1845ad;
+  --text-color: #fefefe;
+  --border-radius: 20px;
 }
 
 * {
   margin: 0;
   padding: 0;
-  font-family: 'Poppins';
+  font-family: "Poppins";
   box-sizing: border-box;
   background-color: var(--secondary-color);
   color: var(--text-color);
 }
-h1{
-  background-color: transparent;
-
+body,
+html {
+  height: 100%;
 }
 
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+h1 {
+  background-color: transparent;
+}
 
 .menu {
-  
   position: fixed;
   left: 0;
-  background-color: rgba(255,255,255,0.08);
- 
+  background-color: rgba(255, 255, 255, 0.08);
   height: 100%;
   width: 200px;
   padding: 20px;
@@ -38,36 +42,27 @@ h1{
   border-radius: 0px 20px 20px 0px;
   backdrop-filter: blur(10px);
   gap: 20px;
-  box-shadow: 0 0 40px rgba(8,7,16,0.6);
+  box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
 }
-.background .shapebv{
+.background .shape {
   backdrop-filter: blur(10px);
   height: 100px;
   width: 100px;
-  position:fixed;
+  position: fixed;
   border-radius: 50%;
 }
-.shapebv:first-child{
-background: linear-gradient(
-    #1845ad,
-    #23a2f6
-);
-left: -10px;
-top: 0px;
-
+.shape:first-child {
+  background: linear-gradient(#1845ad, #23a2f6);
+  left: -10px;
+  top: 0px;
 }
-.shapebv:last-child{
-background: linear-gradient(
-    to right,
-    #ff512f,
-    #f09819
-);
-left: 150px;
-bottom: 0px;
+.shape:last-child {
+  background: linear-gradient(to right, #ff512f, #f09819);
+  left: 150px;
+  bottom: 0px;
 }
 
 .lista-menu {
-  
   background-color: transparent;
   display: flex;
   flex-direction: column;
@@ -76,46 +71,88 @@ bottom: 0px;
 }
 
 .lista-menu li {
- 
   background-color: transparent;
-  
-  padding: 10px;
+  padding: 1px;
 }
 
 .lista-menu li a {
-  
   background-color: transparent;
-  
   color: var(--text-color);
   text-decoration: none;
 }
 
 .lista-menu a:hover {
-  
-  color:#23a2f6
+  color: var(--primary-color);
 }
 
-#containerbv {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    gap: 50px;
-
+.selecionado {
+  color: var(--text-color);
 }
 
-button {
-
-    border-radius: 40px;
-    width: 200px;
-    height:30px;
-    background-color: rgba(255,255,255,0.08);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 0 40px rgba(8,7,16,0.6);
-    cursor: pointer;
+.selecionado a {
+  backdrop-filter: blur(10px);
+  color: var(--text-color);
 }
-button:hover{
-    background-color: transparent;
-    transform ;
+h1 {
+  font-size: 40px;
+  font-weight: bold;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 50px;
+  flex-grow: 1;
+  flex-shrink: 1;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  gap: 10px;
+  height: 620px;
+  width: 400px;
+  background-color: rgba(255, 255, 255, 0.08);
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  border-radius: 40px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+  padding: 40px 25px;
+}
+#titulo {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: var(--primary-color);
+}
+img{
+  border-radius: 50%;
+  height:300px;
+  width: 300px;
+  background-color: transparent;
+}
+
+
+
+.botao-sair {
+  margin-top: 10%;
+  gap: 10px;
+  width: 200px;
+  background-color: var(--text-color);
+  color: var(--secondary-color);
+  padding: 15px 0;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 30px;
+  cursor: pointer;
+  animation: pulsate 2s ease-in-out infinite alternate;
+}
+button:hover {
+  transform: scale(0.98);
+}
+.paragrafo {
+  font-size: 15;
+  background-color: transparent;
+  text-align: left;
 }

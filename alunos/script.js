@@ -29,4 +29,3 @@ function listarAlunos() {
 }
 
 window.onload(listarAlunos());
-

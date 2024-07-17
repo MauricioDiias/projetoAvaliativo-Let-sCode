@@ -50,7 +50,6 @@ form {
   display: grid;
   justify-content: center;
   text-align: center;
-  
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   flex-grow: 1;
   flex-shrink: 1;

@@ -136,6 +136,7 @@ label {
 }
 
 button {
+  text-decoration: none;
   margin-top: 50px;
   width: 100%;
   background-color: var(--text-color);
