@@ -44,5 +44,4 @@ async function carregarDados(usuario, email, idade, cidade, foto, password){
     } catch (error) {
       console.error('Erro ao registrar:', error);
     }
-
 }

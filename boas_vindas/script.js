@@ -2,34 +2,18 @@ const tituloDaSecao = document.getElementById('tituloDaSecao')
     
 window.onload = async () => {
   const usuario = JSON.parse(localStorage.getItem('logado'));
-  console.log(usuario);
 
   let titulo = document.getElementById('titulo')
   let imagem = document.createElement('img')
-  let descricao = document.createElement('p')
+  let descricao = document.createElement('div')
   
   tituloDaSecao.innerHTML += `${usuario.nome}!`;
-  descricao.innerHTML = `Cidade: ${usuario.cidade}<br> Idade:${usuario.idade} <br>Email:${usuario.email}`;
+  descricao.innerHTML = `<p><span class="bolder">Cidade:</span> ${usuario.cidade}</p><p><span class="bolder">Idade:</span> ${usuario.idade}</p><p><span class="bolder">Email:</span> ${usuario.email}</p>`;
+  descricao.className = 'descricao';
 
-  imagem.setAttribute('src', usuario.foto)
+  imagem.setAttribute('src', usuario.foto);
 
   titulo.appendChild(tituloDaSecao);
   titulo.appendChild(imagem);
   titulo.appendChild(descricao);
 };
-
-async function carregarDados(){
-  const apiUrl = "https://projeto-backend-five.vercel.app";
-
-  try {
-    const response = await fetch(`${apiUrl}/users`, {
-      method: 'GET',
-    });
-
-    const result = await response.json();
-    return result;
-  
-  } catch (error) {
-    console.error('Erro ao registrar:', error);
-  }
-}

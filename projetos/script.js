@@ -1,19 +1,9 @@
 const container = document.getElementById("container");
 
 async function carregarDados(){
-  const apiUrl = "https://projeto-backend-five.vercel.app";
+  const data = await fetch("./db/data.json");
+  const response = await data.response;
 
-  try {
-    const response = await fetch(`${apiUrl}/users`, {
-      method: 'GET',
-    });
-
-    const result = await response.json();
-    return result;
-  
-  } catch (error) {
-    console.error('Erro ao registrar:', error);
-  }
 }
 
 async function listarAlunos() {

@@ -1,0 +1,40 @@
+{
+  "projetos":  [
+    {
+      "nome": "Perfil",
+      "foto": "",
+      "descricao": "Projeto HTML de apresentação",
+      "link": "https://github.com/barbosa-jp/lets-code-perfil"
+    },
+    {
+      "nome": "Linktree",
+      "foto": "",
+      "descricao": "Projeto HTML e CSS de um card com as minhas Redes Sociais",
+      "link": "https://github.com/barbosa-jp/lets-code-linktree"
+    },
+    {
+      "nome": "Portifólio",
+      "foto": "",
+      "descricao": "Projeto HTML e CSS de um card com as minhas Redes Sociais",
+      "link": "https://github.com/barbosa-jp/lets-code-portifolio"
+    },
+    {
+      "nome": "Funções de Cálculo",
+      "foto": "",
+      "descricao": "Projeto JS para mostrar funções de cálculos matemáticos mais comuns",
+      "link": "https://github.com/barbosa-jp/funcoes-calculo"
+    },
+    {
+      "nome": "Lista de Estados do Brasil (Sem CSS)",
+      "foto": "",
+      "descricao": "Projeto HTML e JS de listagem dos estados do Brasil e suas características",
+      "link": "https://github.com/barbosa-jp/lista-estados"
+    },
+    {
+      "nome": "Lista de Estados do Brasil (Com CSS)",
+      "foto": "",
+      "descricao": "Projeto HTML, CSS e JS de listagem dos estados do Brasil e suas características",
+      "link": "https://github.com/barbosa-jp/estados-brasil"
+    }
+  ]
+}
