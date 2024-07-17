@@ -39,8 +39,8 @@ function listarAlunos() {
     div.appendChild(idade);
     idade.setAttribute('class', "idade");
     const email = document.createElement('p');
-    email.innerHTML = `Email: ${aluno.email}`;
-    div.appendChild(email);
+    //email.innerHTML = `Email: ${aluno.email}`;
+    //div.appendChild(email);
     email.setAttribute('class', "email");
     const cidade = document.createElement('p');
     cidade.innerHTML = `Cidade: ${aluno.cidade}`;
