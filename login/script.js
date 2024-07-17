@@ -9,7 +9,7 @@ async function carregarDados(){
     localStorage.setItem('usuarios',JSON.stringify(dados))
     console.log(data)
 
-
+// teste
 }
 
 let container = document.getElementById('container')
