@@ -17,3 +17,6 @@ window.onload = async () => {
   titulo.appendChild(imagem);
   titulo.appendChild(descricao);
 };
+
+const sair = document.getElementById("botao-sair");
+sair.addEventListener('click', () => window.location.href = "../login/index.html")

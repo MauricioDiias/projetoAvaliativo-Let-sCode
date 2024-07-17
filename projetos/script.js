@@ -1,36 +1,35 @@
 const container = document.getElementById("container");
 
 async function carregarDados(){
-  const data = await fetch("./db/data.json");
-  const response = await data.response;
-
+  const response = await fetch("./db/data.json");
+  const data = await response.json();
+  return data.projetos;
 }
 
-async function listarAlunos() {
-  let alunos = await carregarDados();
-  alunos.map(aluno => {
+async function listarprojetos() {
+  let projetos = await carregarDados();
+  projetos.map(projeto => {
     const div = document.createElement('div');
     div.className = "card";
     const nome = document.createElement('h1');
-    nome.textContent = aluno.nome;
+    nome.textContent = projeto.nome;
     nome.className = 'titulo'
     div.appendChild(nome);
     const foto = document.createElement('img');
-    foto.setAttribute('src', aluno.foto);
+    foto.setAttribute('src', projeto.foto);
     div.appendChild(foto);
-    const idade = document.createElement('p');
-    idade.innerHTML = `<span class="bolder">Idade:</span> ${aluno.idade}`;
-    div.appendChild(idade);
-    const email = document.createElement('p');
-    email.innerHTML = `<span class="bolder">Email:</span> ${aluno.email}`;
-    div.appendChild(email);
-    const cidade = document.createElement('p');
-    cidade.innerHTML = `<span class="bolder">Cidade:</span> ${aluno.cidade}`;
-    div.appendChild(cidade);
+    const descricao = document.createElement('p');
+    descricao.innerHTML = projeto.descricao;
+    descricao.style = "text-align: justify"
+    div.appendChild(descricao);
+    const link = document.createElement('p');
+    link.innerHTML = `<a href="${projeto.link}">Link para o Github<a>`;
+    link.className = "link"
+    div.appendChild(link);
     container.appendChild(div);
   });
 }
 
-window.onload(listarAlunos());
+window.onload(listarprojetos());
 
 
