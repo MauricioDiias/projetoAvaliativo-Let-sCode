@@ -1,25 +1,25 @@
 .container {
   display: flex;
+	  background-color: #0A3242;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 50px;
   gap: 50px;
-  background-color: blue;
   margin-left: 100px;
+  color: white;
 }
 .projetosContainer{
-	background-color: red;
 	width: 90%;
 }
 .projeto{
 	list-style: NONE;
-	background-color: green;
 	margin-top: 120px;
 }
 .projeto h2{
 	line-height: 100px;
 	letter-spacing: 5px;
+	color: white;
 }
 .projeto a{
 	text-decoration: none;
@@ -49,3 +49,6 @@ h2{
 	text-align: justify;
 	line-height: 1.5;
 }
+.menu{
+	  background-color: #28CEE7;
+}	
