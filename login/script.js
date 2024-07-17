@@ -1,53 +1,36 @@
 // Nome, email, idade, cidade, foto e senha
-async function carregarDados(){
-    const apiUrl = "https://projeto-backend-five.vercel.app"
+const botaoLogin = document.getElementById("botao_login");
+botaoLogin.addEventListener('click', () => {
+  botaoLogin.disabled = true;
+  const email = document.getElementById("email_login").value;
+  const senha = document.getElementById("senha_login").value;
 
-    try {
-        const response = await fetch(`${apiUrl}/login`, {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({ email: "joaopedro@exemplo.com", password: "Senha@123" }),
-        });
+  carregarDados(email, senha);
+})
 
-        const result = await response.json();
+async function carregarDados(email, password){
+  const apiUrl = "https://projeto-backend-five.vercel.app"
+  try {
+      const response = await fetch(`${apiUrl}/login`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email: email, password: password }),
+      });
 
-        if (response.ok) {
-          alert('Login bem sucedido!');
-        } else {
-          alert(`Erro: ${result.error}`);
-        }
-
+      const result = await response.json();
+      
+      if (response.ok) {
+        localStorage.setItem("logado", JSON.stringify(result.user));
         console.log(result);
-      } catch (error) {
-        console.error('Erro ao realizar login:', error);
+        window.location.href = "../boas_vindas/index.html";
+      } else {
+        alert(`Erro: ${result.error}`);
+        botaoLogin.disabled = false;
       }
-    // let response = await fetch('https://raw.githubusercontent.com/GilsonJunio/Alunos-Do-Lets-Code-2024/main/data.json')
-    // let data = await response.json()
-    // let dados = data.alunos
-
-    // localStorage.setItem('usuarios',JSON.stringify(dados))
+  } catch (error) {
+    console.error('Erro ao realizar login:', error);
+  }
 }
 
-let container = document.getElementById('container')
-
-carregarDados()
-
-
-let botaoLogin = document.getElementById("botao_login");
-if(botaoLogin){ 
-    botaoLogin.addEventListener('click', () => {
-        let emailLogin = document.getElementById("email_login").value
-        let senhaLogin = document.getElementById("senha_login").value
-
-        let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
-        let usuario = usuarios.find(usuario => usuario.email === emailLogin && usuario.senha === senhaLogin)
-            localStorage.setItem('usuarioLogado',JSON.stringify(usuario))
-
-        console.log(usuarios, emailLogin, senhaLogin, usuario)
-        if(usuario){
-            window.location.href = "../boas_vindas/index.html"
-        }
-    })
-}

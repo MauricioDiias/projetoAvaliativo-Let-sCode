@@ -1,0 +1,72 @@
+:root {
+  --azul: #0077aa;
+  --azul-claro: #00aaff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%; 
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--azul);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  padding: 40px 25px;
+  background: white;
+  gap: 10px;
+  border-radius: 20px;
+}
+
+h2 {
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input {
+  padding: 10px;
+  border-radius: 10px;
+}
+
+button {
+  background: var(--azul);
+  color: white;
+  font-weight: bolder;
+  border: none;
+  border-radius: 10px;
+  padding: 8px;
+}
+
+button:hover {
+  background: var(--azul-claro);
+}
+
+.paragrafo {
+  font-size: small;
+  padding-top: 10px;
+  text-align: center;
+}
+
+.paragrafo a {
+  color: var(--azul);
+  font-weight: bolder;
+}

@@ -1,8 +1,7 @@
 :root {
-  --azul: rgb(109, 109, 230);
-  --cinza: rgba(128, 128, 128, 0.801);
+  --azul: #0077aa;
+  --azul-claro: #00aaff;
 }
-
 * {
   margin: 0;
   padding: 0;
@@ -35,19 +34,23 @@
 }
 
 .lista-menu li a {
-  color: black;
   text-decoration: none;
 }
 
-.lista-menu a:hover {
+.lista-menu li:not(.selecionado) a {
+  color: black;
+}
+
+.lista-menu li a:hover {
   color: var(--azul);
 }
 
 .selecionado {
-  background-color: var(--azul);
+  background-color: var(--azul-claro);
   color: white;
 }
 
 .selecionado a {
+  font-weight: bolder;
   color: white;
 }
