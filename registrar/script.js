@@ -7,7 +7,7 @@ async function carregarDados(){
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ nome: "Alessandra Ataíde", email: "alessandraataide@exemplo.com", password: "Senha@123", idade: "20", cidade: "Parnaíba - PI", foto: "a","created_at":"2024-07-15T21:09:17.267Z"}),
+        body: JSON.stringify({ nome: "Alessandra Ataíde", email: "alessandraataide@exemplo.com", password: "Senha@123", idade: "20", cidade: "Parnaíba - PI", foto: "https://raw.githubusercontent.com/Ally5923/aula-12/uma-pagina-para-meus-trabalhos-no-pc/meus%20trabalhos/pp.png","created_at":"2024-07-15T21:09:17.267Z"}),
       });
 
       const result = await response.json();
@@ -15,7 +15,7 @@ async function carregarDados(){
       if (response.ok) {
         alert('Registrado com sucesso!');
       } else {
-        alert(`Erro: ${result.error}`);
+        alert(`VAMOS REGISTRAR UM NOVO USUÁRIO!`);
       }
     } catch (error) {
       console.error('Erro ao registrar:', error);
