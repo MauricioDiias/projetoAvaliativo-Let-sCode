@@ -4,19 +4,19 @@
       "nome": "Perfil",
       "foto": "./img/perfil.png",
       "descricao": "Projeto HTML de apresentação",
-      "link": "https://github.com/barbosa-jp/lets-code-perfil"
+      "link": "https://barbosa-jp.github.io/lets-code-perfil/"
     },
     {
       "nome": "Linktree",
       "foto": "./img/linktree.png",
       "descricao": "Projeto HTML e CSS de um card com as minhas Redes Sociais",
-      "link": "https://github.com/barbosa-jp/lets-code-linktree"
+      "link": "https://barbosa-jp.github.io/lets-code-linktree/"
     },
     {
       "nome": "Portifólio",
       "foto": "./img/portifolio.png",
-      "descricao": "Projeto HTML e CSS de um card com as minhas Redes Sociais",
-      "link": "https://github.com/barbosa-jp/lets-code-portifolio"
+      "descricao": "Projeto HTML e CSS para mostrar minha habilidades e competências",
+      "link": "https://barbosa-jp.github.io/lets-code-portifolio/"
     },
     {
       "nome": "Funções de Cálculo",
@@ -28,13 +28,13 @@
       "nome": "Lista de Estados do Brasil (Sem CSS)",
       "foto": "./img/lista-estados.png",
       "descricao": "Projeto HTML e JS de listagem dos estados do Brasil e suas características",
-      "link": "https://github.com/barbosa-jp/lista-estados"
+      "link": "https://barbosa-jp.github.io/lista-estados/"
     },
     {
       "nome": "Lista de Estados do Brasil (Com CSS)",
       "foto": "./img/estados-brasil.png",
       "descricao": "Projeto HTML, CSS e JS de listagem dos estados do Brasil e suas características",
-      "link": "https://github.com/barbosa-jp/estados-brasil"
+      "link": "https://barbosa-jp.github.io/estados-brasil/"
     }
   ]
 }
